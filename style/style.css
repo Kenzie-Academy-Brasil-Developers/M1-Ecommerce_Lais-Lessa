@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+
+body{
+  background-color:#263a51;
+
+}
+
 header {
   width: 100%;
   height: 10vh;
@@ -6,6 +13,7 @@ header {
   flex-direction: row;
   justify-content: center;
   box-shadow: rgb(130, 130, 130) 0px 10px 10px -12px;
+  font-family:'Playfair Display', serif; 
 }
 
 header h1 {
@@ -16,6 +24,9 @@ header h1 {
 .header-menu {
   display: flex;
   gap: 20px;
+  color:#a6955a;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .header-container {
@@ -26,22 +37,32 @@ header h1 {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: #1c2a3a;
+}
+
+.img-header:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 main {
   width: 100%;
   margin: 0 auto;
   max-width: 1200px;
-  padding-top: 40px;
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   font-family: Inter, sans-serif;
+  background-color: #263a51;
+  gap: 30px;
 }
+
 .main-cards {
   min-height: 50vh;
   width: 75%;
 }
 
+  
 .main-details {
   display: flex;
   flex-direction: column;
@@ -52,20 +73,42 @@ main {
   display: flex;
   flex-direction: row;
   height: 20%;
+  align-items:flex-start;
+  justify-content: space-between;
 }
+
 .search-input {
   height: 40%;
-  width: 70%;
+  width: 65%;
+  background-color: #a6955a;
+  border-radius: 5px;
+  border: 1px solid #a6955a;
+ 
+}
+
+.search-input::placeholder{
+  color: #1c2a3a;
+  font-family:'Playfair Display', serif; 
   border: none;
-  background-color: #f5f5f5;
+  font-size: 16px;
+ 
 }
 
 .search-button {
   height: 40%;
   width: 30%;
   border: none;
-  background-color: #2e245e;
-  color: #ffffff;
+  background-color:  #1c2a3a;
+  color: #a6955a;
+  font-size: 16px;
+  border-radius: 5px;
+  font-family:'Playfair Display', serif; 
+
+}
+
+.search-button:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 .main-details aside {
@@ -74,25 +117,42 @@ main {
 }
 
 .cart-title {
-  background-color: #37268c;
-  color: #ffffff;
+  background-color:  #1c2a3a;
+  color:#a6955a;
   height: 10%;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family:'Playfair Display', serif; 
+  border-radius: 5px;
 }
+
 .cart-title h4 {
   font-size: 1.2rem;
 }
+
+.cart-title:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
 .cart-empty {
   height: 60%;
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: rgb(14, 14, 14);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  color: #a6955a;
+  font-family:'Playfair Display', serif; 
+  border-radius: 5px;
+}
+
+.cart-empty:hover{
+transform: scale(1.1);
+transition: all 0.5s;
 }
 
 .cart-empty h5 {
@@ -100,20 +160,161 @@ main {
   font-weight: bold;
 }
 
+
 .cart-details {
   height: 30%;
   width: 100%;
-  background-color: #333333;
+  background-color:  #1c2a3a;
   padding: 15px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-radius: 5px;
+  
+}
+
+.cart-details:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 .details-values {
   width: 100%;
-  color: #ffffff;
+  color:  #a6955a;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family:'Playfair Display', serif; 
+ 
+}
+
+
+.li_cards_css{
+  width: 200px;
+  background-color: 1c2a3a;
+  border-radius: 15px;
+  padding: 30px;
+  border: 4px ridge #a6955a;
+  font-family:'Playfair Display', serif; 
+  color:  #a6955a;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+.li_cards_css:hover{
+  box-shadow: 3px 3px 3px 0px;
+  transition: 0.3s;
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.lista_cards_css{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  
+}
+
+.productButton{
+  background-color: transparent;
+  border: none;
+  color: #a6955a;
+  font-size: 18px;
+
+}
+
+.productButton:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
+  text-decoration: underline;
+ 
+}
+
+.pTag{
+  font-size: 20px;
+
+}
+
+.pNameItem{
+  font-size: 20px;
+  text-align: center;
+}
+
+.pValue{
+  font-size: 24px;
+  text-align: center;
+}
+
+.pDescription{
+  text-align: center;
+}
+
+li:hover{
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.hide{
+  display: none;
+}
+
+.btn_remove{
+  height: 30px;
+  width: 80px;
+  border: none;
+  border-radius: 10px;
+  background-color: #a6955a;
+  margin: 10px;
+  color: #1c2a3a;
+}
+
+.btn_remove:hover{
+  background-color: #f2de96;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+
+.images{
+  height: 200px;
+  width: 200px;
+  text-align: center;
+}
+
+.class-ul img{
+  height: 50px;
+  width: 50px;
+}
+
+.cart-products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #1c2a3a;
+  margin: 10px;
+  box-shadow: 1px 1px 1px 1px #a6955a;
+  width: 90%;
+  color: #f2de96;
+}
+
+.class-ul{
+  overflow-y:scroll;
+  max-height: 500px;
+  width: 100%;
+}
+
+.class-ul::-webkit-scrollbar {
+  width: 10px;
+}
+
+.class-ul::-webkit-scrollbar-thumb {
+  background-color: #9e9333a9;
+  border-radius: 5px;
 }
