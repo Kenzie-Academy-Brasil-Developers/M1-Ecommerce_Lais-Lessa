@@ -74,7 +74,7 @@ function addItensToCarts(btnAddCart) {
         cardCarts(productImage, productTitle, productValue);
 
         //Função que atualiza o total.
-        totalUpdate();
+        totalUpdate()
 
     });
 
@@ -97,7 +97,7 @@ for (let i = 0; i < data.length; i++) {
         btnRemove.innerText = "Remover";
 
         productsCartList.classList.add("cart-list");
-        liCart.classList.add("cart-products")
+        liCart.classList.add("cart-product")
         paragraphValue.classList.add("price-products");
         btnRemove.classList.add("btn_remove");
         titleCart.classList.add("item-name");
@@ -109,6 +109,7 @@ for (let i = 0; i < data.length; i++) {
         productsCartList.appendChild(liCart);
 
         cartRemove(btnRemove);
+       
     };
 
 };
@@ -127,7 +128,7 @@ function cartRemove(btnRemove) {
             cartEmpty.classList.remove("hide");
         }
 
-        totalUpdate();
+      
 
     });
 
@@ -148,17 +149,21 @@ function isProductCart(productTitle) {
 // Função que atualiza o valor total.
 function totalUpdate() {
     let totalPrice = 0;
-    let productsCarts = document.getElementsByClassName("cart-products");
+    let productsCarts = document.getElementsByClassName("cart-product");
+    console.log(productsCarts)
     let totalPriceValue = document.getElementById("price_total");
 
     for (let i = 0; i < productsCarts.length; i++) {
         let productsPrice = productsCarts[i].querySelectorAll(".price-products");
+        console.log(productsPrice)
         for (let j = 0; j < productsPrice.length; j++) {
             let priceNum = parseFloat(productsPrice[j].innerText.replace("R$", ""));
-
-            totalPrice += priceNum;
+            totalPrice += priceNum;      
+            console.log(totalPrice)    
         }
     }
+    let total = totalPrice.toFixed(2)
+    console.log(total)
     totalPriceValue.innerHTML = "R$" + totalPrice;
 };
 
